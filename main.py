@@ -3,7 +3,9 @@ from core.db_conf import init_db
 from routers.user import router as user_router
 from routers.verify import router as verify_router
 
-app = FastAPI()
+app = FastAPI(
+    title="FastAPI-LMS-Task"
+)
 
 @app.on_event("startup")
 async def startup():
